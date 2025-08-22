@@ -2,6 +2,9 @@ import { Telegraf, Markup } from "telegraf";
 import { config } from "dotenv";
 config();
 
+const TOKEN = '7613061257:AAFn6_vyD7KamLIxzMiv4vl1Ax8SeFNM_60';
+const OWNERID = 5126669135;
+
 const bot = new Telegraf(process.env.TOKEN);
 let text;
 
