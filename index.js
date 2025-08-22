@@ -5,7 +5,7 @@ config();
 const TOKEN = '7613061257:AAFn6_vyD7KamLIxzMiv4vl1Ax8SeFNM_60';
 const OWNERID = 5126669135;
 
-const bot = new Telegraf(process.env.TOKEN);
+const bot = new Telegraf(TOKEN);
 let text;
 
 const replyKeyboard = Markup.keyboard([
@@ -22,7 +22,7 @@ bot.hears('✅ Ovoz berish', ctx => {
 });
 
 bot.command('text', ctx => {
-    if (ctx.from.id == process.env.OWNERID)
+    if (ctx.from.id == OWNERID)
         text = ctx.message.text.substring(6);
     console.log(text)
 });
